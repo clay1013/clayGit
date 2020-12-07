@@ -1,0 +1,50 @@
+<html>
+<!-- HTML comment
+        Sung Am Kim (Clay)
+        Assignemtn type: Assignment 8 (part 1)
+        This program has the function that takes an array of numbers and a number as a parameter.
+        The function counts and returns a number of times a given number has been repeated in the array.
+    -->
+
+<head>
+    <title>Assignment 8 Sung Kim</title>
+    <script>
+        /* This function takes an array as a parameter and returns
+        This function counts and returns a number of times a given number has been repeated in the array*/
+        
+        // Function that counts how many times the number (1) in an array
+        function countOccurences(numArray, num) {
+            for (var i = 0; i < numArray.length; i++) {
+                if (numArray[i] == num) {
+                    count++;
+                }
+            }
+            return count; // return value 3
+        }
+        // This might be an extra work but I had this for practice
+        // Function takes an arrays as parameter and returns a copy of it.
+        function copyArray(numArray) {
+            var copy = [];
+            for (var i = 0; i < numArray.length; i++) {
+                copy[i] = numArray[i];
+            }
+            return copy;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Array Analysis Function</h1>
+
+    <script>
+        var count = 0; //counting value
+        var numbers = [1,1,5,6,2,11,1,6,0]; // Given array
+        var result = countOccurences(numbers,1); // Call the function with value (1)
+        var newArray = copyArray(numbers); // Call the function for copy of array
+    
+    // Print result with calling functions
+    document.write("The number of occurrences of 1 in [" +newArray+ "] is " + result);
+    </script>
+</body>
+
+</html>

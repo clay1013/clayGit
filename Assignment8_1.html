@@ -1,0 +1,74 @@
+<html>
+<!-- HTML comment
+        Sung Am Kim (Clay)
+        Assignemtn type: Assignment 8 (part 1)
+        This program will ask the user to enter arbitray number of positive and negative integers.
+        Each time the user enters an integer the program asks whether the user wants to enter one more and it stores the value in the array.
+        Use a loop to output all the integers stored in array in two groups: first output all negative integers and their sum, then output all positive integers and their sum.
+    -->
+
+<head>
+    <title>Assignment 8 Sung Kim</title>
+</head>
+
+<body>
+    <h1>Series of Integers</h1>
+
+    <script>
+        // Declaring array for pos and neg numbers
+        var negativeInt = new Array();
+        var positiveInt = new Array();
+        var more; //confirm - ask user to put more value
+        var n = 0;
+        var p = 0; //
+        var total = 0; // accumulator
+        var totalPo = 0; // accumulator
+    
+
+        do {
+           // Ask users to put negative number and change to Integer value
+            negativeInt[n] = parseInt(prompt("Enter negative integer number ",""));;
+            n++;
+            // Ask users to put one more number
+            more = confirm("One more?");  
+            } 
+
+        while (more == true); // Keep going if the user wants to put another number
+
+        // Print all the negative numbers that user entered
+      
+        document.write("You entered the following negative integers: " +negativeInt.join(", ")  + "<br/>");
+        
+        // total out put done with the loop
+        for (n = 0; n < negativeInt.length; n++) {
+           total += negativeInt[n]; // caculate the total value in the array
+       }
+        // Print the sum of all negative numbers
+        document.write("The sum of all negative integers is " +total+ "<br/>");
+        
+
+
+        do {
+            // Ask users to put negative number and change to Integer value
+            positiveInt[p] = parseInt(prompt("Enter positive integer number ",""));;
+            p++; 
+            // Ask users to put one more number
+            more = confirm("One more?");
+
+        } while (more == true); // Keep going if the user wants to put another number
+
+        // Print all the negative numbers that user entered
+        document.write("You entered the following positive integers: " +positiveInt.join(", ") + "<br/>");
+        
+        // total out put done with the loop
+        for (p = 0; p < positiveInt.length; p++) {
+           totalPo += positiveInt[p]; // caculate the total value in the array
+       }
+
+         // Print the sum of all negative numbers
+        document.write("The sum of all positive integers is " +totalPo+ "<br/>");
+        
+    </script>
+</body>
+
+</html>
